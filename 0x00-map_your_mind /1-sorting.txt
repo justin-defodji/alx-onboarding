@@ -1,0 +1,10 @@
+threeNumbers = [number1,number2, number3]
+
+FOR number IN threeNumbers
+    IF number < threeNumbers[threeNumbers.indexOf(number) + 1 ]
+        nextNumber <- threeNumbers[threeNumbers.indexOf(number) + 1 ]
+        threeNumbers.remove(threeNumbers.indexOf(number) + 1)
+        threeNumbers.add(index: threeNumbers.indexOf(number))
+    ELSE
+        PASS
+RETURN threeNumbers

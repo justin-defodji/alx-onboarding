@@ -1,0 +1,17 @@
+VARIABLE BOOL haveNextNumber <- True
+VARIABLE ARRAY inputNumbers <- []
+VARIABLE INTEGER sum <- 0
+IF haveNextNumber IS True
+    INPUT VALUE inputNumber <- VALUE => 'Your number please(Input text to display)'
+    IF inputNumber IS NOT NULL
+        IF inputNumber IS A NUMBER
+            inputNumbers <- number
+        ELSE
+            PASS
+    ELSE
+        haveNextNumber <- False
+ELSE
+    FOR EACH number IN inputNumbers
+        numberSquare <- number x number
+        sum <- sum + numberSquare
+RETURN sum

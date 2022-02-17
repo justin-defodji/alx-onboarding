@@ -1,0 +1,13 @@
+VARIABLE BOOL haveNextNumber <- True
+VARIABLE INTEGER sum <- 0
+IF haveNextNumber IS True
+    INPUT VALUE inputNumber <- VALUE => 'Your number please(Input text to display)'
+    IF inputNumber IS AN INTEGER
+        IF inputNumber > 0
+            sum <- sum + inputNumber
+        ELSE
+            haveNextNumber <- False
+    ELSE
+        PASS
+ELSE
+    return sum
